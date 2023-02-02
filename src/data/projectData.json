@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Product Customizer",
+    "id": "1",
+    "img": "/assets/portfolio/wss.png",
+    "link": "/projects/product-customizer",
+    "description": "An overhaul of an existing Webstaurant tool that gives customers the ability to customize products.",
+    "screenshot": "/assets/portfolio/screenshots/spred.png"
+  },
+  {
+    "name": "WebstaurantStore App",
+    "id": "2",
+    "img": "/assets/portfolio/wss.png",
+    "link": "/projects/webstaurantstore-app",
+    "description": "A dedicated mobile app experience of the WebstaurantStore ecommerce web app.",
+    "screenshot": "/assets/portfolio/screenshots/spred.png"
+  },
+  {
+    "name": "RWB Construction",
+    "id": "3",
+    "img": "/assets/portfolio/roar.png",
+    "link": "/projects/rwb-construction",
+    "description": "RWB Construction, a high-end home builder, was looking for a complete refresh of their site.",
+    "screenshot": "/assets/portfolio/screenshots/rwb.png"
+  },
+  {
+    "name": "Custom Metal Designs",
+    "id": "4",
+    "img": "/assets/portfolio/roar.png",
+    "link": "/projects/custom-metal-designs",
+    "description": "Custom Metal Desings, a metal and rebotics fabricator, was looking for a website update.",
+    "screenshot": "/assets/portfolio/screenshots/cmd.png"
+  },
+  {
+    "name": "ChannelMix",
+    "id": "5",
+    "img": "/assets/portfolio/chmx.png",
+    "link": "/projects/channelmix",
+    "description": "ChannelMix is a SaaS platform for marketers control to aggregate and manipulate their data.",
+    "screenshot": "/assets/portfolio/screenshots/spred.png"
+  },
+  {
+    "name": "Spred Web App",
+    "id": "6",
+    "img": "/assets/portfolio/wss.png",
+    "link": "/projects/spred-app",
+    "description": "Spred is a startup that allows marketers to create, manage, and disperse content in one platform.",
+    "screenshot": "/assets/portfolio/screenshots/spred.png"
+  }
+]

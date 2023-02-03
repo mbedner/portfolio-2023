@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { RiLinkedinBoxFill } from "react-icons/ri";
 import profImg from "../../../public/assets/home/img-placeholder.png";
@@ -13,7 +14,18 @@ const About = ({ heading, bodyText }) => {
   return (
     <section className="bg-white overflow-hidden md:py-20 py-14" id="portfolio">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
-        <div className="md:flex-row flex-col-reverse flex justify-center text-left lg:pt-5 lg:pb-8 items-center container m-auto gap-12">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            type: "spring",
+            duration: 1,
+            delayChildren: 0.75,
+            delay: 0.25,
+          }}
+          className="md:flex-row flex-col-reverse flex justify-center text-left lg:pt-5 lg:pb-8 items-center container m-auto gap-12"
+        >
           <div className="md:flex-1 md:flex md:mt-0 items-center justify-center pointer-events-none select-none">
             <Image
               alt="profile pic"
@@ -23,7 +35,7 @@ const About = ({ heading, bodyText }) => {
             />
           </div>
           <div className="flex md:flex-1 flex-col">
-            <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-slate-800 md:text-4xl mb-4 capitalize">
+            <h2 className="text-3xl font-black leading-9 tracking-tight text-slate-800 md:text-4xl mb-4 capitalize">
               {heading}
             </h2>
             <p className="text-slate-500">{bodyText}</p>
@@ -60,7 +72,7 @@ const About = ({ heading, bodyText }) => {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

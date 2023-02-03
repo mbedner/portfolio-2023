@@ -1,8 +1,9 @@
-import React from "react";
+import Link from "next/link";
 import { RiMailOpenFill, RiBriefcase4Fill } from "react-icons/ri";
 import { motion } from "framer-motion";
 
-const Hero = ({ heading, subheading, bodyText }) => {
+const Hero = ({ heading, subheading }) => {
+  console.log(subheading);
   return (
     <section className="py-14 md:py-20 flex items-center justify-center">
       <motion.div
@@ -19,7 +20,6 @@ const Hero = ({ heading, subheading, bodyText }) => {
             {subheading}
           </span>
         </div>
-        <p className="font-sans text-xl text-slate-500">{bodyText}</p>
         <div className="mt-8 flex justify-center gap-3 w-full flex-col sm:flex-row">
           <a
             className="w-full sm:w-auto border border-indigo-500 bg-indigo-400 shadow-inset rounded-lg text-white font-semibold transition flex items-center justify-center gap-2 leading-6 hover:bg-indigo-500 hover:border-indigo-600 py-3 px-6 focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-200"
@@ -28,13 +28,13 @@ const Hero = ({ heading, subheading, bodyText }) => {
             <RiMailOpenFill className="text-indigo-100 text-lg" />
             Contact Me
           </a>
-          <a
+          <Link
             className="w-full sm:w-auto border border-slate-300 bg-white shadow-sm rounded-lg text-slate-800 font-semibold transition flex items-center justify-center gap-2 leading-6 hover:bg-slate-50 hover:border-slate-400 py-3 px-6 focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-200"
-            href="#projects"
+            href="/#projects"
           >
             <RiBriefcase4Fill className="text-slate-400 text-lg" />
             See Work
-          </a>
+          </Link>
         </div>
       </motion.div>
     </section>

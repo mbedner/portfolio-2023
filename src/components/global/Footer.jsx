@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   RiMailOpenFill,
   RiTwitterFill,
@@ -8,6 +9,7 @@ import {
 const Footer = ({ heading, bodyText }) => {
   return (
     <footer className="border-t border-slate-200">
+      {/* <footer className="bg-gray-50"> */}
       <div className="py-14 md:py-20 container mx-auto max-w-7xl flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="flex gap-6 max-w-[640px] items-center justify-center text-center container flex-col">
           <h2 className="text-3xl md:text-4xl font-black font-sans text-slate-800 capitalize">
@@ -23,13 +25,13 @@ const Footer = ({ heading, bodyText }) => {
               <RiMailOpenFill className="text-indigo-100 text-lg" />
               Contact Me
             </a>
-            <a
+            <Link
               className="w-full sm:w-auto border border-slate-300 bg-white shadow-sm rounded-lg text-slate-800 font-semibold transition flex items-center justify-center gap-2 leading-6 hover:bg-slate-50 hover:border-slate-400 py-3 px-6 focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-200"
-              href="#projects"
+              href="/#projects"
             >
               <RiBriefcase4Fill className="text-slate-400 text-lg" />
               See Work
-            </a>
+            </Link>
           </div>
         </div>
       </div>

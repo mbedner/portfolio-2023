@@ -1,4 +1,4 @@
-import React from "react";
+import { motion } from "framer-motion";
 import {
   RiMailOpenFill,
   RiStarFill,
@@ -11,7 +11,18 @@ const Testimonial = () => {
     <section className="border-t border-slate-200">
       <div className="bg-white overflow-hidden md:py-20 py-14 relative">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative container">
-          <div className="flex lg:justify-between m-auto lg:flex-row flex-col">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              type: "spring",
+              duration: 1,
+              delayChildren: 0.75,
+              delay: 0.25,
+            }}
+            className="flex lg:justify-between m-auto lg:flex-row flex-col"
+          >
             <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-slate-800 md:text-4xl max-w-3xl mb-4 capitalize">
               What others say about working with me
             </h2>
@@ -24,8 +35,19 @@ const Testimonial = () => {
                 Contact Me
               </a>
             </div>
-          </div>
-          <div className="lg:grid lg:grid-cols-7 gap-12 mt-12">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              type: "spring",
+              duration: 1,
+              delayChildren: 0.75,
+              delay: 0.5,
+            }}
+            className="lg:grid lg:grid-cols-7 gap-12 mt-12"
+          >
             <div className="lg:col-span-4 flex items-left flex-col lg:justify-center justify-start lg:mb-0 mb-6 lg:p-0 p-5 bg-white lg:shadow-none shadow-sm lg:rounded-none rounded-xl lg:border-none border border-slate-300">
               <p className="lg:text-xl text-slate-500 lg:pt-0 pt-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -61,7 +83,7 @@ const Testimonial = () => {
               <SingleTestimonial />
               <SingleTestimonial />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

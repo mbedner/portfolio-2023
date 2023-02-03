@@ -1,10 +1,16 @@
 import React from "react";
 import { RiMailOpenFill, RiBriefcase4Fill } from "react-icons/ri";
+import { motion } from "framer-motion";
 
 const Hero = ({ heading, subheading, bodyText }) => {
   return (
     <section className="py-14 md:py-20 flex items-center justify-center">
-      <div className="flex gap-6 max-w-[640px] items-center justify-center text-center container flex-col px-4 sm:px-6 lg:px-0">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ type: "spring", duration: 1 }}
+        className="flex gap-6 max-w-[640px] items-center justify-center text-center container flex-col px-4 sm:px-6 lg:px-0"
+      >
         <div className="flex gap-3 flex-col-reverse items-center justify-center">
           <h1 className="text-4xl md:text-5xl font-black font-sans text-slate-800">
             {heading}
@@ -30,7 +36,7 @@ const Hero = ({ heading, subheading, bodyText }) => {
             See Work
           </a>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -2,7 +2,8 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="bg-gradient-to-r from-indigo-400 via-purple-400 to-blue-300 p-2 text-center text-white flex md:gap-2 items-center justify-center md:flex-row flex-col relative">
+    <div className="bg-gradient-to-r from-indigo-400 via-purple-400 to-blue-300 p-2 text-center text-white flex md:gap-2 items-center justify-center md:flex-row flex-col relative overflow-hidden">
+      <div className="bg-white h-80 w-80 rounded-full absolute blur-xl opacity-[8%] blur-transition"></div>
       <span className="flex md:gap-2 gap-1">
         <span>👋</span> I'm available for hire. Hit me up if you want to chat!
       </span>

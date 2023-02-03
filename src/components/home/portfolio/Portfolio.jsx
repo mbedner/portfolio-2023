@@ -1,4 +1,3 @@
-import React from "react";
 import Card from "./Card";
 
 const Portfolio = ({ projects }) => {
@@ -25,25 +24,3 @@ const Portfolio = ({ projects }) => {
 };
 
 export default Portfolio;
-
-// export async function getStaticProps() {
-//   const GET_PROJECTS = gql`
-//     query GetProjectsData {
-//       projects {
-//         nodes {
-//           title
-//           excerpt
-//           id
-//         }
-//       }
-//     }
-//   `;
-
-//   const response = await client.query({
-//     query: GET_PROJECTS,
-//   });
-//   const projects = response?.data?.projects?.nodes;
-//   return {
-//     props: { projects }, // will be passed to the page component as props
-//   };
-// }

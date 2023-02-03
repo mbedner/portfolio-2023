@@ -9,7 +9,7 @@ import SingleTestimonial from "./SingleTestimonial";
 const Testimonial = () => {
   return (
     <section className="border-t border-slate-200">
-      <div className="bg-white overflow-hidden md:py-20 py-14 relative">
+      <div className=" overflow-hidden md:py-20 py-14 relative">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative container">
           <motion.div
             initial={{ opacity: 0, y: 50 }}

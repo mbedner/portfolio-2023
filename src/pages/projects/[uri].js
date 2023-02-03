@@ -6,6 +6,9 @@ import Header from "@/components/global/Header";
 import client from "@/lib/apollo";
 import { gql } from "@apollo/client";
 import Footer from "@/components/global/Footer";
+import Hero from "@/components/project/Hero";
+import Overview from "@/components/project/Overview";
+import ProjectDetails from "@/components/project/ProjectDetails";
 
 export default function Project({ project }) {
   return (
@@ -18,7 +21,16 @@ export default function Project({ project }) {
       <Banner />
       <Header />
       <main>
-        <h1>{project.title}</h1>
+        <Hero
+          heading={project.title}
+          subheading={project.project.company.companyName}
+        />
+        <Overview intro={project.project.introduction} />
+        <ProjectDetails
+          challenge={project.project.problem.problemText}
+          approach={project.project.solution.solutionText}
+          outcome={project.project.outcome.outcomeText}
+        />
       </main>
       <Footer
         heading={project.project.cta.heading}
@@ -36,9 +48,30 @@ export async function getStaticProps({ params }) {
         title
         project {
           introduction
+          company {
+            companyName
+          }
           cta {
             bodyText
             heading
+          }
+          outcome {
+            outcomeImage {
+              sourceUrl
+            }
+            outcomeText
+          }
+          problem {
+            problemText
+            problemImage {
+              sourceUrl
+            }
+          }
+          solution {
+            solutionText
+            solutionImage {
+              sourceUrl
+            }
           }
         }
       }

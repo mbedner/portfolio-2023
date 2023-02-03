@@ -35,7 +35,7 @@ const About = ({ heading, bodyText }) => {
             />
           </div>
           <div className="flex md:flex-1 flex-col">
-            <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-slate-800 md:text-4xl mb-4 capitalize">
+            <h2 className="text-3xl font-black leading-9 tracking-tight text-slate-800 md:text-4xl mb-4 capitalize">
               {heading}
             </h2>
             <p className="text-slate-500">{bodyText}</p>

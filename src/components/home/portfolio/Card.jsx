@@ -1,25 +1,23 @@
 import Link from "next/link";
 
-const Card = ({ project, image }) => {
+const Card = ({ project, thumbnail, mark }) => {
   return (
     <div className="w-full bg-white shadow-sm rounded-xl border border-slate-300 overflow-hidden">
       <div className="w-full bg-slate-100 aspect-video">
-        {image && (
+        {thumbnail && (
           <img
-            src={image.sourceUrl}
+            src={thumbnail.sourceUrl}
             alt=" "
             className="object-cover w-full h-full"
           />
         )}
       </div>
       <div className="p-4 relative flex flex-col justify-between">
-        <div className="w-12 h-12 shadow-lg rounded-full absolute -top-6 bg-white flex items-center justify-center overflow-hidden">
-          {/* <Image
-            // src={proj.img} alt={proj.name}
-            alt=" "
-            className="h-6 w-auto"
-          /> */}
-        </div>
+        {mark && (
+          <div className="w-12 h-12 shadow-lg rounded-full absolute -top-6 bg-white flex items-center justify-center overflow-hidden">
+            <img src={mark.sourceUrl} alt=" " className="h-6 w-auto" />
+          </div>
+        )}
         <div>
           <h3 className="text-slate-800 text-xl font-extrabold md:mb-2 mb-1 mt-4 capitalize">
             {project.title}

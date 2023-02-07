@@ -5,6 +5,8 @@ import {
   RiCheckboxCircleFill,
 } from "react-icons/ri";
 import SingleTestimonial from "./SingleTestimonial";
+import arrow from "../../../../public/assets/home/testimonial-arrow.png";
+import Image from "next/image";
 
 const Testimonial = () => {
   return (
@@ -48,7 +50,18 @@ const Testimonial = () => {
             }}
             className="lg:grid lg:grid-cols-7 gap-12 md:mt-12 mt-6"
           >
-            <div className="lg:col-span-4 flex items-left flex-col lg:justify-center justify-start lg:mb-0 mb-6 lg:p-0 p-5 bg-white lg:shadow-none shadow-sm lg:rounded-none rounded-xl lg:border-none border border-slate-300">
+            <div className="lg:col-span-4 relative flex items-left flex-col lg:justify-center justify-start lg:mb-0 mb-6 lg:p-0 p-5 bg-white lg:shadow-none shadow-sm lg:rounded-none rounded-xl lg:border-none border border-slate-300">
+              <div className="absolute -left-32 top-1/3 lg:block">
+                <p className="text-sm text-indigo-600 relative -left-[7rem] top-[28px]">
+                  Ooo, so flattering!
+                </p>
+                <Image
+                  src={arrow}
+                  alt=""
+                  className="relative select-none pointer-events-none"
+                />
+              </div>
+
               <p className="lg:text-xl text-slate-500 lg:pt-0 pt-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

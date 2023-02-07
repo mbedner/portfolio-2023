@@ -9,6 +9,7 @@ import ps from "../../../public/assets/home/tools/ps.png";
 import wp from "../../../public/assets/home/tools/wp.png";
 import tw from "../../../public/assets/home/tools/tw.png";
 import react from "../../../public/assets/home/tools/react.png";
+import arrow from "../../../public/assets/home/about-arrow.png";
 
 const About = ({ heading, bodyText }) => {
   return (
@@ -26,7 +27,17 @@ const About = ({ heading, bodyText }) => {
           }}
           className="md:flex-row flex-col-reverse flex justify-center text-left lg:pt-5 lg:pb-8 items-center container m-auto gap-12"
         >
-          <div className="md:flex-1 md:flex md:mt-0 items-center justify-center pointer-events-none select-none">
+          <div className="md:flex-1 md:flex md:mt-0 items-center justify-center pointer-events-none select-none relative">
+            <div className="absolute right-24 -top-4 lg:block">
+              <p className="text-sm text-indigo-600 relative -left-2 top-[14px]">
+                That's Me!
+              </p>
+              <Image
+                src={arrow}
+                alt=""
+                className="relative -left-[4.5rem] select-none pointer-events-none"
+              />
+            </div>
             <Image
               alt="profile pic"
               src={profImg}

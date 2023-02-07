@@ -3,7 +3,6 @@ import { RiMailOpenFill, RiBriefcase4Fill } from "react-icons/ri";
 import { motion } from "framer-motion";
 
 const Hero = ({ heading, subheading }) => {
-  console.log(subheading);
   return (
     <section className="py-14 md:py-20 flex items-center justify-center">
       <motion.div

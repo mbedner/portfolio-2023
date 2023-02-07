@@ -1,5 +1,5 @@
 import Banner from "@/components/global/Banner";
-import Header from "@/components/global/Header";
+import Header from "@/components/global/HeaderHome";
 import Link from "next/link";
 import { RiArrowLeftLine, RiAlertFill } from "react-icons/ri";
 

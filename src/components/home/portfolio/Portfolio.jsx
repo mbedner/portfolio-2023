@@ -1,7 +1,8 @@
 import Card from "./Card";
 import { motion } from "framer-motion";
 
-const Portfolio = ({ projects }) => {
+const Portfolio = ({ projects, image }) => {
+  console.log(image);
   return (
     <div
       className="bg-slate-50 overflow-hidden md:py-20 py-14 relative"
@@ -16,7 +17,6 @@ const Portfolio = ({ projects }) => {
             type: "spring",
             duration: 1,
             delayChildren: 0.75,
-            delay: 0.25,
           }}
           className="flex justify-center text-center container m-auto"
         >
@@ -32,13 +32,17 @@ const Portfolio = ({ projects }) => {
             type: "spring",
             duration: 1,
             delayChildren: 0.75,
-            delay: 0.5,
+            delay: 0.25,
           }}
           className="grid lg:grid-cols-3 sm:grid-cols-2 md:pt-10 pt-6 gap-8 relative"
         >
           {projects &&
             projects.map((project) => (
-              <Card project={project} key={project.id} />
+              <Card
+                project={project}
+                key={project.id}
+                image={project.project.thumbnail}
+              />
             ))}
         </motion.div>
       </div>

@@ -1,17 +1,16 @@
-import Image from "next/image";
 import Link from "next/link";
 
-const Card = ({ project }) => {
+const Card = ({ project, image }) => {
   return (
     <div className="w-full bg-white shadow-sm rounded-xl border border-slate-300 overflow-hidden">
       <div className="w-full bg-slate-100 aspect-video">
-        {/* {proj.screenshot && (
+        {image && (
           <img
-            // src={proj.screenshot}
-            // alt={proj.name}
+            src={image.sourceUrl}
+            alt=" "
             className="object-cover w-full h-full"
           />
-        )} */}
+        )}
       </div>
       <div className="p-4 relative flex flex-col justify-between">
         <div className="w-12 h-12 shadow-lg rounded-full absolute -top-6 bg-white flex items-center justify-center overflow-hidden">

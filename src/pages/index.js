@@ -89,13 +89,12 @@ export async function getStaticProps() {
         nodes {
           title
           uri
+          id
           project {
-            introduction
-            company {
-              companyName
+            thumbnail {
+              sourceUrl
             }
           }
-          id
         }
       }
     }

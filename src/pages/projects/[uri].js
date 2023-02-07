@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Banner from "@/components/global/Banner";
-import Header from "@/components/global/Header";
+import Header from "@/components/global/HeaderProject";
 
 import client from "@/lib/apollo";
 import { gql } from "@apollo/client";

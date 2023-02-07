@@ -4,7 +4,7 @@ import { gql } from "@apollo/client";
 
 import Banner from "@/components/global/Banner";
 import Footer from "@/components/global/Footer";
-import Header from "@/components/global/Header";
+import Header from "@/components/global/HeaderHome";
 import Hero from "@/components/home/Hero";
 import LatestWork from "@/components/home/LatestWork";
 import Companies from "@/components/home/Companies";
@@ -91,8 +91,14 @@ export async function getStaticProps() {
           uri
           id
           project {
+            introduction
             thumbnail {
               sourceUrl
+            }
+            company {
+              companyMark {
+                sourceUrl
+              }
             }
           }
         }

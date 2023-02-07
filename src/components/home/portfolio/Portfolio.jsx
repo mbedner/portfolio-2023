@@ -2,7 +2,6 @@ import Card from "./Card";
 import { motion } from "framer-motion";
 
 const Portfolio = ({ projects, image }) => {
-  console.log(image);
   return (
     <div
       className="bg-slate-50 overflow-hidden md:py-20 py-14 relative"
@@ -41,7 +40,8 @@ const Portfolio = ({ projects, image }) => {
               <Card
                 project={project}
                 key={project.id}
-                image={project.project.thumbnail}
+                thumbnail={project.project.thumbnail}
+                mark={project.project.company.companyMark}
               />
             ))}
         </motion.div>

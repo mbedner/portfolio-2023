@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 import Banner from "@/components/global/Banner";
 import Header from "@/components/global/HeaderProject";
 
@@ -14,7 +13,7 @@ export default function Project({ project }) {
   return (
     <>
       <Head>
-        <title>{project.title} - Mark Bedner</title>
+        <title>{`${project.title} - Mark Bedner`}</title>
         <meta name="description" content={`Read more about ${project.title}`} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -25,7 +24,10 @@ export default function Project({ project }) {
           heading={project.title}
           subheading={project.project.company.companyName}
         />
-        <Overview intro={project.project.introduction} />
+        <Overview
+          intro={project.project.introduction.introductionText}
+          tools={project.project.introduction.toolGallery}
+        />
         <ProjectDetails
           challenge={project.project.problem.problemText}
           approach={project.project.solution.solutionText}
@@ -47,7 +49,13 @@ export async function getStaticProps({ params }) {
         uri
         title
         project {
-          introduction
+          introduction {
+            introductionText
+            toolGallery {
+              sourceUrl
+              id
+            }
+          }
           company {
             companyName
           }

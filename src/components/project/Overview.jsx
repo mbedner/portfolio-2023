@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const Overview = ({ intro }) => {
+const Overview = ({ intro, tools }) => {
   return (
     <section className="bg-slate-50 overflow-hidden md:py-20 py-14 relative ">
       <motion.div
@@ -19,7 +19,18 @@ const Overview = ({ intro }) => {
             Tools used on this project
           </div>
           <div className="flex md:pt-6 gap-2 flex-wrap pt-4">
-            <div className="w-12 h-12 shadow rounded-full bg-white border border-slate-200 box-border flex justify-center items-center"></div>
+            {tools?.map((tool) => (
+              <div
+                className="w-12 h-12 shadow rounded-full bg-white border border-slate-200 box-border flex justify-center items-center"
+                key={tool.id}
+              >
+                <img
+                  src={tool.sourceUrl}
+                  className="h-6 w-auto select-none pointer-events-none"
+                  alt=""
+                />
+              </div>
+            ))}
           </div>
         </div>
         <div className="col-span-4">

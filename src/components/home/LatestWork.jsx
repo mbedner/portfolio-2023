@@ -1,5 +1,5 @@
 import Image from "next/image";
-import computer from "../../../public/assets/home/computer.png";
+import computer from "../../../public/assets/home/computer2.png";
 import arrow from "../../../public/assets/home/computer-arrow.png";
 
 const LatestWork = () => {
@@ -11,7 +11,7 @@ const LatestWork = () => {
         </p>
         <Image
           src={arrow}
-          alt=""
+          alt="decorative arrow"
           className="relative -left-[4.5rem] select-none pointer-events-none"
         />
       </div>

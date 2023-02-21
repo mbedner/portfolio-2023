@@ -25,7 +25,7 @@ const Skills = ({ skills, skillsCopy }) => {
           </div>
           <div className="flex flex-col md:flex-row gap-8 mb-4">
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ type: "spring", duration: 0.65, delay: 0.2 }}
@@ -42,7 +42,7 @@ const Skills = ({ skills, skillsCopy }) => {
               </div>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ type: "spring", duration: 0.65, delay: 0.4 }}
@@ -59,7 +59,7 @@ const Skills = ({ skills, skillsCopy }) => {
               </div>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ type: "spring", duration: 0.65, delay: 0.6 }}

@@ -23,12 +23,12 @@ const Card = ({ project, thumbnail, mark }) => {
             {project.title}
           </h3>
           <p className="text-slate-500 line-clamp-2">
-            {project.project.introduction}
+            {project.project.introduction.introductionText}
           </p>
         </div>
         <div>
           <Link
-            href={`${project.uri}`}
+            href={project.uri}
             className="w-full sm:w-auto flex justify-center items-center border border-slate-300 bg-white shadow-sm rounded-lg text-slate-800 font-semibold transition gap-2 text-sm leading-6 hover:bg-slate-50 hover:border-slate-400 py-2 px-4 sm:inline-flex mt-6 focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-200"
           >
             Learn More
